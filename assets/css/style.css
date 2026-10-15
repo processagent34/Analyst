@@ -28,6 +28,7 @@
 }
 
 [data-theme="dark"] {
+  color-scheme: dark;
   --bg: #111416;
   --surface: #181c1f;
   --surface-2: #1f2427;
@@ -95,7 +96,7 @@ ul, ol { margin: 0; padding: 0; }
 
 /* ---------- Header / nav ---------- */
 .site-header {
-  position: sticky; top: 0; z-index: 50; height: var(--header-h);
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; height: var(--header-h);
   background: color-mix(in srgb, var(--bg) 88%, transparent);
   backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px);
   border-bottom: 1px solid transparent;

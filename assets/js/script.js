@@ -286,6 +286,10 @@
       status.hidden = true;
       var bad = validate();
       if (bad) { bad.focus(); return; }
+      if (!D.formspreeEndpoint) {
+        show("err", "This copy of the site cannot send messages. Please email me at " + D.email + ".");
+        return;
+      }
 
       submit.disabled = true;
       var original = submit.textContent;
